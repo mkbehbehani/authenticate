@@ -1,4 +1,10 @@
 Authenticate::Application.routes.draw do
+
+  # allows for nicer aliasing of routes
+  get 'register', to: 'users#new', as: 'register'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   resources :users
   resources :sessions
 
