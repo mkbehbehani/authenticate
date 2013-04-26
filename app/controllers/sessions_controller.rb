@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 	# by setting the user_id to nil, halts any controller reliant on the session
 	def destroy
 		session[:user_id] = nil
+		redirect_to root_url
 	end
 end
 
