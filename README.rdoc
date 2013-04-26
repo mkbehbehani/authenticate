@@ -29,6 +29,9 @@ $rails s
 
 navigate to localhost:3000 in your browser
 
+To view all users, as well as show, edit and destroy, navigate to localhost:3000/users
+These actions would typically be restricted using admin roles and before_filters, but are currently accessible for inspection.
+
 ==Password Resets
 When a user enters their email address to request a password reset, an email is sent with a url containing the auth_token. This is then interpreted by the password_resets controller, and redirects the user toward an edit method. The configuration files can be found in config/environments, allowing the mailer to be plugged into a mail service such as SendGrid for production. In the local server, the mail delivery is handled on localhost:3000.
 
