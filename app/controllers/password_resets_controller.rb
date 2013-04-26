@@ -3,9 +3,9 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-  	u = User.find_by_email(params[:email])
-  	u.send if u
+  	user = User.find_by_email(params[:email])
+  	user.send if user
   	redirect_to root_url
-  	
+
   end
 end
