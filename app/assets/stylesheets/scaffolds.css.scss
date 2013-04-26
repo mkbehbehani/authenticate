@@ -1,11 +1,15 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-image: image-url("snowflakes.jpg");
+  color: #fff;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+h1 {
+font-family: 'Jolly Lodger', cursive;
+font-size: 4em;  
 
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -19,13 +23,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #fff;
+  text-decoration: none;
   &:visited {
-    color: #666;
+    color: #fff;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #fff;
+    text-decoration: underline;
   }
 }
 
