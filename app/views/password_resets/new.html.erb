@@ -1,2 +1,9 @@
-<h1>PasswordResets#new</h1>
-<p>Find me in app/views/password_resets/new.html.erb</p>
+<%= form_tag password_resets_path do :method => :post do %>
+<!-- passes email to 'create' method in password_resets controller -->
+	<div class="field">
+		<%= label_tag :email %>
+		<br />
+		<%= text_field_tag :email, params[:email] %>
+	</div>	
+	<div class="actions"> <%= submit_tag "Send Password Reset Email" %></div>
+<% end %>
