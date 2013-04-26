@@ -1,8 +1,12 @@
-<div class="centered">
+<div class="centered winterbg">
 <% if current_user %>
-<h1>Coming Soon!</h1>
+	Welcome, <%= current_user.name %>!
+	<h1>Coming Soon!</h1>
+	<%= link_to "Log Out", logout_path %>
 <% else %>
-<h1>Hello!</h1>
-<p>Log In or Register to continue.</p>
+	<h1>Hello!</h1>
+	<!-- each path points to the aliased route in routes.rb -->
+	<p><%= link_to "Log In", login_path %> or <%= link_to "Register", register_path %> to continue.</p>
+
 <% end %>
 </div>

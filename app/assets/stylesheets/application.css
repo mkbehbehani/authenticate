@@ -16,3 +16,9 @@ text-align: center;
 margin-left: auto;
 margin-right: auto;
 }
+.winterbg {
+width: 60%;
+background-color: #0d193b;
+border: 1px solid #f8e4ff;
+border-radius: 7px;
+}
