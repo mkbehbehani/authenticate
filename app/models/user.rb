@@ -7,7 +7,10 @@ class User < ActiveRecord::Base
   before_create { create_token (:auth_token)}
   #runs generate_token method, passing it into auth_token column
 
-
+  def send_password_reset
+    generate_token(:password_reset_token)
+    
+  end
 
   # any db column can later be given as an argument
   def create_token(column)
