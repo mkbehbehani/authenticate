@@ -1,4 +1,4 @@
-
+<div class="centered winterbg">
 <h1>Set a new password:</h1>
 <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
 <!-- url is added to form tag to override default routing to users controller -->
@@ -28,3 +28,4 @@
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+</div>
