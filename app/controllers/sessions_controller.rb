@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 	# creates a session by comparing finding a user entered in login form, and 
 	# checking whether the authenticate method passes back as "true"
 	def create
@@ -15,3 +15,4 @@ class SessionController < ApplicationController
 		session[:user_id] = nil
 	end
 end
+
