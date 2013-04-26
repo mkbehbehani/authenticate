@@ -9,7 +9,10 @@ class User < ActiveRecord::Base
 
   def send_password_reset
     generate_token(:password_reset_token)
-    
+    save!
+    #generates token, saves into password_reset_token column, saves in place
+    UserMailer.password_reset(self).deliver
+    # invokes the UserMailer, uses the password_reset on the user, deliver sends the actual message
   end
 
   # any db column can later be given as an argument
@@ -22,6 +25,5 @@ class User < ActiveRecord::Base
   	end while User.exists?(column => self[column])
   
   end
-
 
 end
