@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :name, :password, :password_confirmation, :auth_token, :question, :on => :create
   
 
-  before_create { create_token (:auth_token)}
+  before_create { generate_token (:auth_token)}
   #runs generate_token method, passing it into auth_token column
 
   def send_password_reset
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   end
 
   # any db column can later be given as an argument
-  def create_token(column)
+  def generate_token(column)
   	begin
   #creates a token string, which will be added to column
   	  self[column] = SecureRandom.urlsafe_base64
