@@ -6,6 +6,7 @@ user's session cookie and for password resets. Admin roles and before filters ca
 
 To get the application up and running you will need Rails and Ruby installed.
 
+$bundle install
 
 $rake db:create
 $rake db:migrate
