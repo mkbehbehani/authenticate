@@ -19,7 +19,7 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
@@ -27,6 +27,15 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
+  <div class="field">
+    <%= f.label "Security Question" %><br />
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label "Answer" %><br />
+    <%= f.text_field :auth_token %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
