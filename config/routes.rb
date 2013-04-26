@@ -5,7 +5,7 @@ Authenticate::Application.routes.draw do
   get 'register', to: 'users#new', as: 'register'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
-
+  # get 'password_resets', to: 'password_resets#new', as: 'password_resets'
 
 
   resources :users
