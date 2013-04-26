@@ -1,1 +1,21 @@
 Web app with authentication, written in Ruby on Rails.
+
+
+Demo of the password reset mailer from development log:
+
+"Sent mail to mkbehbehani@gmail.com (7ms)
+Date: Fri, 26 Apr 2013 00:06:42 -0500
+From: from@example.com
+To: mkbehbehani@gmail.com
+Message-ID: <517a0b624a1e7_19dc3ff0221d3100680e8@mashallah-ubuntu.mail>
+Subject: Password Reset Request
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, please reset your password by clicking the link below:
+
+http://localhost:3000/password_resets/IX_gs8yus4ffqoHfAIy5Kw/edit
+Redirected to http://localhost:3000/
+Completed 302 Found in 663ms (ActiveRecord: 142.7ms"
